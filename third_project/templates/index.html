@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/first.css'%} "/>
+</head>
+<body>
+
+<h1 >Hello This is my First Ever.</h1>
+<a href="https://chat.openai.com/c/f40285bf-48b7-4a68-9a2f-e7d2c91be1ea">ChatGpt</a>
+
+{% static "images/15.jpg" as Nature3 %}
+<img src="{{Nature3}}" alt="Nature Image" />
+
+<img src="{% static 'images/12.jpg' %}"  alt="Nature Image" />
+
+<img src="{% get_static_prefix %}images/gdv.jpg"  alt="Nature2 Image" />
+
+<script src="{% static 'js/index.js' %}"></script>
+
+</body>
+</html>
+

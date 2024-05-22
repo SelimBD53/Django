@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "{% static 'first_app/css/first.css'%}" />
+</head>
+<body>
+
+<h1 >we are in side the app.</h1>
+<h1>I Love Bangladesh</h1>
+<img src="{% static 'first_app/images/15.jpg' %}" alt="Nature">
+{% comment %} {% if age >= 18 %}
+<p>Vi tumi Driving Licence Nita Parba. </p>
+{% else %}
+<p>Tumi Shesu Basy Jaue</p>
+{% endif %} {% endcomment %}
+
+{% comment %} {% if markes >= 18 %}
+<p>Vi tumi A+ Paiso</p>
+{% elif markes >= 70 and markes >= 65 %}
+<p>Vi tumi A Paiso</p>
+{% else %}
+<p>Vi tumi A- Paiso</p>
+{% endif %} {% endcomment %}
+
+{% comment %} <table border="5" width=500 >
+    <tr>
+        <th>ID</th>
+        <th>Course</th>
+        <th>Teacher</th>
+    </tr>
+        {% for i in courses %}
+        <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.course}}</td>
+        <td>{{i.teacher}}</td>
+        </tr>
+        {% endfor %}
+
+</table> {% endcomment %}
+
+<h1>Autho Marks: {{name}}</h1>
+<h1>{{marks | add:"2"}}</h1>
+<h1>{{marks | divisibleby:"3"}}</h1>
+<h1>{{name | length}}</h1>
+<h1>{{name | wordcount}}</h1>
+<h1>{{blog |truncatewords:5 }}</h1>
+<h1>{{blog |truncatechars:20 }}</h1>
+<h1>{{name |make_list }}</h1>
+<h1>{{name |upper }}</h1>
+<h1>{{name |lower }}</h1>
+<h1>{{lst | join:","}}</h1>
+</body>
+</html>
+
